@@ -22,16 +22,19 @@ export default function Home({ postData }) {
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog List</h2>
         <ul className={utilStyles.list}>
+          {/* Duyệt mảng postData để render list các post */}
           {postData.map(({ id, date, title }) => (
-            <Link href={`/blog/${id}`}>
-              <li className={utilStyles.listItem} key={id}>
-                {title}
-                <br />
-                {id}
-                <br />
-                {date}
-              </li>
-            </Link>
+            <li className={utilStyles.listItem} key={id}>
+              <Link href={`/blog/${id}`}>
+                <a>
+                  {title}
+                </a>
+              </Link>
+              <br />
+              {id}
+              <br />
+              {date}
+            </li>
           ))}
         </ul>
       </section>

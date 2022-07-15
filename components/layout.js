@@ -5,7 +5,7 @@ import styles from './layout.module.css';
 import utilStyles from "../styles/utils.module.css";
 
 const name = 'blink fox';
-const siteTitle = 'nextjs blog';
+export const siteTitle = 'nextjs blog';
 // Đóng vai trò như là một container trong bootstrap
 export default function Layout({ children, home }) {
     return (
